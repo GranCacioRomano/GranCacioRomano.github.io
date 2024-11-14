@@ -42,3 +42,4 @@ let navLinks = document.querySelectorAll(".menu li a");
 navLinks.forEach((link) => {
   link.addEventListener("click", hideNavMenu); // Nasconde il menu al clic su qualsiasi link
 });
+// Facciaml
