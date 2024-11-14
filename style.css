@@ -1,0 +1,597 @@
+/* Importa i font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+  margin: 0; /* Rimuove il margine di default per tutti gli elementi */
+  padding: 0; /* Rimuove il padding di default per tutti gli elementi */
+  box-sizing: border-box; /* Imposta box-sizing su border-box per un controllo migliore delle dimensioni */
+  text-decoration: none; /* Rimuove le decorazioni sui testi (come il sottolineato nei link) */
+  scroll-behavior: smooth; /* Abilita uno scroll fluido */
+}
+
+/* Personalizza la barra di scorrimento */
+::-webkit-scrollbar {
+    width: 10px; /* Larghezza della barra di scorrimento */
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Colore di sfondo della traccia */
+}
+::-webkit-scrollbar-thumb {
+    background: #a67c3d; /* Colore della barra di scorrimento */
+    border-radius: 12px;
+    transition: all 0.3s ease; /* Transizione del colore al passaggio del mouse */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a67c3d; /* Colore al passaggio del mouse */
+}
+/* Barra di navigazione */
+/* Stile della barra di navigazione */
+nav{
+    position: fixed; /* Fissa la barra in cima alla pagina */
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease; /* Transizione fluida per modifiche */
+    font-family: 'Ubuntu', sans-serif; /* Font della barra di navigazione */
+  }
+nav.sticky{
+    background: #a67c3d; /* Colore di sfondo quando la barra è "sticky" */
+    padding: 13px 0; /* Riduce padding quando la barra è "sticky" */
+}
+nav .navbar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* Spaziatura tra logo e menu */
+    align-items: center;
+    margin: auto;
+}
+nav .navbar .logo a{
+    font-weight: 500;
+    font-size: 35px;
+    color: #fff; /* Colore del logo */
+}
+nav.sticky .navbar .logo a{
+    color: #fff; /* Cambia colore del logo quando "sticky" */
+}
+/* Contenitore del menu di navigazione */
+nav .navbar .menu {
+    display: flex; /* Dispone gli elementi in linea (orizzontalmente) */
+    position: relative; /* Imposta una posizione relativa per posizionamento flessibile */
+  }
+  
+/* Stile per gli elementi della lista del menu */
+nav .navbar .menu li {
+    list-style: none; /* Rimuove i punti elenco */
+    margin: 0 8px; /* Spazio tra gli elementi del menu */
+}
+  
+/* Stile dei link nel menu di navigazione */
+.navbar .menu a {
+    font-size: 18px; /* Dimensione del testo */
+    font-weight: 500; /* Grassetto medio */
+    color: #f5f5f5; /* Colore del testo */
+    padding: 6px 0; /* Spazio sopra e sotto il testo */
+    transition: all 0.4s ease; /* Transizione su tutti gli elementi */
+}
+  
+/* Stile dei link del menu al passaggio del mouse */
+.navbar .menu a:hover {
+    color: #a67c3d; /* Colore dorato al passaggio del mouse */
+}
+  
+/* Stile dei link del menu quando la barra di navigazione è "sticky" (appiccicosa) */
+nav.sticky .menu a {
+    color: #FFF; /* Cambia il colore del testo in bianco */
+}
+  
+/* Stile dei link del menu al passaggio del mouse quando la barra è "sticky" */
+nav.sticky .menu a:hover {
+    color: #f5f5f5; /* Cambia leggermente il colore del testo al passaggio del mouse */
+}
+  
+/* Stile per le icone dei social media nel menu */
+.navbar .media-icons a {
+    color: #fff; /* Colore dorato per le icone */
+    font-size: 18px; /* Dimensione delle icone */
+    margin: 0 6px; /* Spazio tra le icone */
+}
+  
+/* Stile per le icone dei social media quando la barra è "sticky" */
+nav.sticky .media-icons a {
+    color: #FFF; /* Cambia il colore delle icone in bianco */
+}
+  
+/* Stile per il pulsante del menu e il pulsante di chiusura del menu */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+    position: absolute; /* Posizione assoluta per il posizionamento preciso */
+    color: #fff; /* Colore del testo bianco */
+    right: 30px; /* Spazio a destra del pulsante */
+    top: 20px; /* Spazio dalla parte superiore */
+    font-size: 20px; /* Dimensione del pulsante */
+    cursor: pointer; /* Mostra il cursore a forma di mano */
+    transition: all 0.3s ease; /* Transizione su tutti gli elementi */
+    display: none; /* Nasconde il pulsante di default */
+}
+  
+/* Stile per il pulsante del menu normale */
+nav .menu-btn {
+    color: #a67c3d; /* Colore dorato */
+}
+  
+/* Stile per il pulsante del menu quando la barra è "sticky" */
+nav.sticky .menu-btn {
+    color: #FFF; /* Cambia il colore del pulsante in bianco */
+}
+  
+/* Stile per il pulsante del menu nel contesto della barra di navigazione */
+.navbar .menu .menu-btn {
+    color: #fff; /* Colore del pulsante in bianco */
+}
+/* Sezione Home */
+.home {
+    height: 100vh; /* Altezza al 100% della viewport */
+    width: 100%; /* Larghezza al 100% */
+    background: url("Color.jpg") no-repeat; /* Immagine di sfondo senza ripetizione */
+    background-size: cover; /* L'immagine copre tutta la sezione */
+    background-position: center; /* Centra l'immagine */
+    background-attachment: fixed; /* Sfondo fisso durante lo scorrimento */
+    font-family: 'Ubuntu', sans-serif; /* Font principale della sezione */
+}
+  
+/* Contenitore principale dei contenuti nella sezione Home */
+.home .home-content {
+    width: 90%; /* Larghezza del contenitore al 90% */
+    height: 100%; /* Altezza del contenitore al 100% */
+    margin: auto; /* Centra il contenitore orizzontalmente */
+    display: flex; /* Imposta layout flessibile */
+    flex-direction: column; /* Colonna verticale */
+    justify-content: center; /* Centra verticalmente i contenuti */
+}
+
+/* Stile del primo testo */
+.home .text-one {
+    font-size: 25px; /* Dimensione del testo */
+    color: #f5f5f5; /* Colore bianco del testo */
+}
+  
+/* Stile del secondo testo */
+.home .text-two {
+    color: #f5f5f5; /* Colore bianco */
+    font-size: 75px; /* Grande dimensione del testo */
+    font-weight: 600; /* Grassetto */
+    margin-left: -3px; /* Spostamento leggermente a sinistra */
+}
+  
+/* Stile del terzo testo */
+.home .text-three {
+    font-size: 40px; /* Dimensione medio-grande del testo */
+    margin: 5px 0; /* Margine sopra e sotto */
+    color: #a67c3d; /* Colore dorato */
+}
+  
+/* Stile del quarto testo */
+.home .text-four {
+    font-size: 23px; /* Dimensione medio-piccola del testo */
+    margin: 5px 0; /* Margine sopra e sotto */
+    color: #a67c3d; /* Colore dorato */
+}
+  
+/* Contenitore del pulsante */
+.home .button {
+    margin: 14px 0; /* Margine sopra e sotto */
+}
+  
+/* Stile del pulsante */
+.home .button button {
+    outline: none; /* Rimuove il contorno del pulsante */
+    padding: 8px 16px; /* Spaziatura interna (padding) */
+    border-radius: 6px; /* Angoli arrotondati */
+    font-size: 25px; /* Dimensione del testo del pulsante */
+    font-weight: 400; /* Peso normale del testo */
+    background: #a67c3d; /* Colore di sfondo dorato */
+    color: #fff; /* Colore del testo bianco */
+    cursor: pointer; /* Cambia il cursore a forma di mano */
+    border: 2px solid transparent; /* Bordo trasparente */
+    transition: all 0.4s ease; /* Transizione graduale su tutti gli elementi */
+}
+  
+/* Stile del pulsante al passaggio del mouse */
+.home .button button:hover {
+    border-color: #a67c3d; /* Colore dorato del bordo */
+    background-color: #fff; /* Colore di sfondo bianco */
+    color: #a67c3d; /* Colore del testo dorato */
+}
+/* Stile generale della sezione */
+section {
+    padding-top: 40px; /* Spaziatura superiore per separare la sezione dagli altri elementi */
+  }
+  
+/* Contenitore dei contenuti all'interno della sezione */
+section .content {
+    width: 80%; /* Larghezza del contenitore all'80% della larghezza della sezione */
+    margin: 40px auto; /* Centra il contenitore e aggiunge margine sopra e sotto */
+    font-family: 'Poppins', sans-serif; /* Font principale per il testo */
+}
+  
+/* Layout della sezione "about" */
+.about .about-details {
+    display: flex; /* Disposizione flessibile per allineare elementi orizzontalmente */
+    justify-content: space-between; /* Spaziatura uniforme tra gli elementi */
+    align-items: center; /* Allineamento verticale al centro */
+}
+  
+/* Titolo della sezione, centrato */
+section .title {
+    display: flex; /* Layout flessibile per centrare il contenuto */
+    justify-content: center; /* Centra il titolo orizzontalmente */
+    margin-bottom: 40px; /* Spaziatura sotto il titolo */
+}
+  
+/* Stile dello span del titolo */
+section .title span {
+    color: #0E2431; /* Colore del testo */
+    font-size: 30px; /* Dimensione del testo */
+    font-weight: 600; /* Peso grassetto */
+    position: relative; /* Posizionamento per aggiungere effetti decorativi */
+    padding-bottom: 8px; /* Spaziatura sotto il testo */
+}
+  
+/* Decorazioni lineari sopra e sotto il titolo */
+section .title span::before,
+section .title span::after {
+    content: ''; /* Elementi decorativi senza contenuto di testo */
+    position: absolute;
+    height: 3px; /* Altezza della linea decorativa */
+    width: 100%; /* Larghezza completa del testo */
+    background: #a67c3d; /* Colore dorato della linea */
+    left: 0; /* Posizionato all'inizio del testo */
+    bottom: 0; /* Posizionato sotto il testo */
+}
+  
+section .title span::after {
+    bottom: -7px; /* Posizionamento inferiore rispetto alla prima linea */
+    width: 70%; /* Larghezza al 70% per creare un effetto più corto */
+    left: 50%; /* Centra la linea rispetto al testo */
+    transform: translateX(-50%); /* Compensa il margine sinistro per centrare */
+}
+  
+/* Stile della parte sinistra della sezione "about" */
+.about .about-details .left {
+    width: 45%; /* Larghezza del contenitore sinistro */
+}
+  
+/* Immagine all'interno della parte sinistra */
+.about .left img {
+    height: 400px; /* Altezza dell'immagine */
+    width: 400px; /* Larghezza dell'immagine */
+    object-fit: cover; /* Taglio dell'immagine per coprire il contenitore */
+    border-radius: 12px; /* Angoli arrotondati dell'immagine */
+}
+  
+/* Stile della parte destra della sezione "about" */
+.about-details .right {
+    width: 55%; /* Larghezza del contenitore destro */
+}
+  
+/* Stile del sottotitolo */
+section .topic {
+    color: #0E2431; /* Colore del testo */
+    font-size: 25px; /* Dimensione del testo */
+    font-weight: 500; /* Peso semigrassetto */
+    margin-bottom: 10px; /* Spaziatura sotto il sottotitolo */
+}
+  
+/* Stile del paragrafo nella parte destra della sezione "about" */
+.about-details .right p {
+    text-align: justify; /* Allinea il testo in modo giustificato */
+    color: #0E2431; /* Colore del testo */
+}
+  
+/* Stile del contenitore del pulsante */
+section .button {
+    margin: 16px 0; /* Margine sopra e sotto il pulsante */
+}
+  
+/* Stile del pulsante */
+section .button button {
+    outline: none; /* Rimuove il contorno del pulsante */
+    padding: 8px 16px; /* Spaziatura interna */
+    border-radius: 4px; /* Angoli arrotondati */
+    font-size: 25px; /* Dimensione del testo del pulsante */
+    font-weight: 400; /* Peso normale */
+    background: #a67c3d; /* Colore di sfondo dorato */
+    color: #fff; /* Colore del testo bianco */
+    border: 2px solid transparent; /* Bordo trasparente */
+    cursor: pointer; /* Cambia il cursore a forma di mano */
+    transition: all 0.4s ease; /* Transizione graduale su tutti gli elementi */
+}
+  
+/* Stile del pulsante al passaggio del mouse */
+section .button button:hover {
+    border-color: #a67c3d; /* Colore dorato del bordo */
+    background-color: #fff; /* Sfondo bianco */
+    color: #a67c3d; /* Colore del testo dorato */
+}
+  
+/* Stile della sezione "My Skills" */
+.skills {
+    background: #F0F8FF; /* Colore di sfondo celeste chiaro */
+}
+.skills .content {
+    padding: 40px 0; /* Spaziatura sopra e sotto la sezione */
+}
+.skills .skills-details {
+    display: flex; /* Layout flessibile per disposizione orizzontale */
+    justify-content: space-between; /* Spaziatura uniforme tra gli elementi */
+    align-items: center; /* Allineamento verticale centrale */
+}
+.skills-details .text {
+    width: 50%; /* Larghezza del testo al 50% */
+}
+.skills-details p {
+    color: #0E2431; /* Colore del testo scuro */
+    text-align: justify; /* Allineamento giustificato */
+}
+.skills .skills-details .experience {
+    display: flex; /* Layout flessibile per elementi allineati orizzontalmente */
+    align-items: center; /* Allineamento centrale verticale */
+    margin: 0 10px; /* Margine laterale */
+}
+.skills-details .experience .num {
+    color: #0E2431; /* Colore del testo scuro */
+    font-size: 80px; /* Dimensione grande per il numero di anni di esperienza */
+}
+.skills-details .experience .exp {
+    color: #0E2431; /* Colore del testo scuro */
+    margin-left: 20px; /* Spaziatura a sinistra */
+    font-size: 18px; /* Dimensione del testo */
+    font-weight: 500; /* Peso semi-grassetto */
+    margin: 0 6px; /* Margine laterale */
+}
+.skills-details .boxes {
+    width: 45%; /* Larghezza del contenitore per le "skills" */
+    display: flex; /* Layout flessibile per allineamento orizzontale */
+    flex-wrap: wrap; /* Permette l'adattamento su più righe */
+    justify-content: space-between; /* Spaziatura uniforme tra le "skills" */
+}
+.skills-details .box {
+    width: calc(100% / 2 - 20px); /* Larghezza per due elementi per riga */
+    margin: 20px 0; /* Spaziatura sopra e sotto ogni "skill" */
+}
+.skills-details .boxes .topic {
+    font-size: 20px; /* Dimensione del testo del titolo della skill */
+    color: #a67c3d; /* Colore dorato per il titolo */
+}
+.skills-details .boxes .per {
+    font-size: 60px; /* Dimensione grande per la percentuale */
+    color: #a67c3d; /* Colore dorato per la percentuale */
+}
+  
+/* Stile della sezione "My Services" */
+.services .boxes {
+    display: flex; /* Layout flessibile per disposizione orizzontale */
+    flex-wrap: wrap; /* Adattamento su più righe */
+    justify-content: space-between; /* Spaziatura uniforme tra i box */
+}
+.services .boxes .box {
+    margin: 20px 0; /* Spaziatura verticale tra i box */
+    width: calc(100% / 3 - 20px); /* Larghezza per tre box per riga */
+    text-align: center; /* Allineamento del testo centrale */
+    border-radius: 12px; /* Angoli arrotondati */
+    padding: 30px 10px; /* Spaziatura interna */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12); /* Ombra intorno al box */
+    cursor: default; /* Cursore normale */
+    transition: all 0.4s ease; /* Transizione graduale */
+}
+.services .boxes .box:hover {
+    background: #a67c3d; /* Sfondo dorato al passaggio del mouse */
+    color: #fff; /* Testo bianco al passaggio del mouse */
+}
+.services .boxes .box .icon {
+    height: 50px; /* Altezza dell'icona */
+    width: 50px; /* Larghezza dell'icona */
+    background: #a67c3d; /* Sfondo dorato dell'icona */
+    border-radius: 50%; /* Forma circolare */
+    text-align: center; /* Testo centrato */
+    line-height: 50px; /* Altezza di linea per centratura verticale */
+    font-size: 18px; /* Dimensione del testo dell'icona */
+    color: #fff; /* Colore del testo bianco */
+    margin: 0 auto 10px auto; /* Centra l'icona */
+    transition: all 0.4s ease; /* Transizione graduale */
+}
+.boxes .box:hover .icon {
+    background-color: #fff; /* Sfondo bianco dell'icona al passaggio del mouse */
+    color: #a67c3d; /* Colore dorato del testo */
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+    color: #fff; /* Testo bianco al passaggio del mouse */
+}
+  
+/* Stile della sezione "Contact Me" */
+.contact {
+    background: #F0F8FF; /* Sfondo celeste chiaro */
+}
+.contact .content {
+    margin: 0 auto; /* Centra il contenitore */
+    padding: 30px 0; /* Spaziatura sopra e sotto la sezione */
+}
+.contact .text {
+    width: 80%; /* Larghezza del testo */
+    text-align: center; /* Allineamento del testo al centro */
+    margin: auto; /* Centra il contenitore */
+}
+  
+/* Stile del footer */
+footer {
+    background: #a67c3d; /* Sfondo dorato */
+    padding: 15px 0; /* Spaziatura sopra e sotto il footer */
+    text-align: center; /* Allineamento del testo al centro */
+    font-family: 'Poppins', sans-serif; /* Font principale */
+}
+footer .text span {
+    font-size: 17px; /* Dimensione del testo */
+    font-weight: 400; /* Peso normale */
+    color: #fff; /* Colore bianco del testo */
+}
+footer .text span a {
+    font-weight: 500; /* Peso semi-grassetto per i link */
+    color: #FFF; /* Colore bianco del link */
+}
+footer .text span a:hover {
+    text-decoration: underline; /* Sottolineatura al passaggio del mouse */
+}
+  
+/* Bottone per tornare in cima alla pagina */
+.scroll-button a {
+    position: fixed; /* Posizionamento fisso in basso a destra */
+    bottom: 20px; /* Distanza dal fondo della pagina */
+    right: 20px; /* Distanza dal lato destro della pagina */
+    color: #fff; /* Colore del testo bianco */
+    background: #a67c3d; /* Sfondo dorato */
+    padding: 7px 12px; /* Spaziatura interna */
+    font-size: 18px; /* Dimensione del testo */
+    border-radius: 6px; /* Angoli arrotondati */
+    box-shadow: rgba(0, 0, 0, 0.15); /* Ombra per il bottone */
+    display: none; /* Non visibile di default */
+}
+  
+/* Media query per responsività */
+  
+/* Se lo schermo è massimo 1190px di larghezza */
+@media (max-width: 1190px) {
+section .content {
+    width: 85%; /* Riduce la larghezza del contenitore */
+}
+}
+  
+/* Se lo schermo è massimo 1000px di larghezza */
+@media (max-width: 1000px) {
+.about .about-details {
+    justify-content: center;
+    flex-direction: column; /* Disposizione verticale */
+}
+.about .about-details .left {
+    display: flex; /* Layout flessibile */
+    justify-content: center; /* Centra il contenuto */
+    width: 100%;
+}
+.about-details .right {
+    width: 90%;
+    margin: 40px 0;
+}
+.services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px); /* Due box per riga */
+}
+}
+  
+/* Se lo schermo è massimo 900px di larghezza */
+@media (max-width: 900px) {
+.about .left img {
+    height: 350px;
+    width: 350px; /* Ridimensiona l'immagine */
+}
+}
+
+/* Se lo schermo è massimo 750px di larghezza */
+@media (max-width: 750px) {
+nav .navbar {
+    width: 90%; /* Riduce la larghezza della barra di navigazione */
+}
+/* Menu di navigazione mobile */
+nav .navbar .menu {
+    position: fixed; /* Posizione fissa del menù */
+    left: -100%; /* Nasconde il menù fuori dallo schermo inizialmente */
+    top: 0; /* Allineamento in alto */
+    background: #a67c3d; /* Colore di sfondo scuro */
+    height: 100vh; /* Altezza del menù uguale all'altezza della finestra */
+    max-width: 400px; /* Larghezza massima per il menù */
+    width: 100%; /* Larghezza del 100% per il menù */
+    padding-top: 60px; /* Spaziatura superiore per evitare il contenuto sovrapposto */
+    flex-direction: column; /* Layout verticale per gli elementi */
+    align-items: center; /* Allineamento orizzontale centrale */
+    transition: all 0.5s ease; /* Transizione per la comparsa graduale */
+}
+  
+/* Quando la navbar è attiva (menù visibile) */
+.navbar.active .menu {
+    left: 0; /* Sposta il menù in posizione visibile */
+}
+  
+/* Stile per i link del menù */
+nav .navbar .menu a {
+    font-size: 23px; /* Dimensione del testo */
+    display: block; /* Visualizza come blocco */
+    color: #fff; /* Colore del testo bianco */
+    margin: 10px 0; /* Spaziatura verticale tra i link */
+}
+  
+/* Colore del link al passaggio del mouse */
+nav.sticky .menu a:hover {
+    color: #a67c3d; /* Colore dorato al passaggio del mouse */
+}
+  
+/* Nasconde le icone dei social media nella navbar su mobile */
+nav .navbar .media-icons {
+    display: none; /* Nasconde le icone */
+}
+  
+/* Mostra il bottone per aprire il menù e il bottone di annullamento */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+    display: block; /* Mostra i bottoni */
+}
+  
+/* Stile per il testo principale della home */
+.home .text-two {
+    font-size: 65px; /* Dimensione del testo principale */
+}
+.home .text-three {
+    font-size: 35px; /* Dimensione del testo secondario */
+}
+  
+/* Sezione delle competenze (skills) */
+.skills .skills-details {
+    align-items: center; /* Allinea gli elementi al centro verticalmente */
+    justify-content: center; /* Allinea gli elementi al centro orizzontalmente */
+    flex-direction: column; /* Imposta la direzione in verticale */
+}
+  
+.skills-details .text {
+    width: 100%; /* Larghezza del contenitore del testo */
+    margin-bottom: 50px; /* Margine inferiore per separazione */
+}
+  
+.skills-details .boxes {
+    justify-content: center; /* Allinea i box al centro orizzontalmente */
+    align-items: center; /* Allinea i box al centro verticalmente */
+    width: 100%; /* Larghezza al 100% per i box */
+}
+  
+/* Riduce la larghezza dei box nella sezione "My Services" su mobile */
+.services .boxes .box {
+    margin: 20px 0; /* Spaziatura verticale */
+    width: 100%; /* Larghezza del 100% per i box */
+}
+  
+/* Sezione di contatto */
+.contact .text {
+    width: 100%; /* Larghezza al 100% per il testo di contatto */
+}
+  
+/* Media query per schermi con larghezza massima di 500px (smartphone) */
+@media (max-width: 500px) {
+.home .text-two {
+    font-size: 55px; /* Riduce la dimensione del testo principale */
+    }
+.home .text-three {
+    font-size: 33px; /* Riduce la dimensione del testo secondario */
+    }
+.skills-details .boxes .per {
+    font-size: 50px; /* Riduce la dimensione della percentuale */
+    color: #a67c3d; /* Colore dorato per la percentuale */
+    }
+}
+}
