@@ -1,0 +1,240 @@
+/* Header */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Barra di navigazione orizzontale */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Utilizzo del flexbox per disporre i link orizzontalmente */
+    justify-content: center; /* Allinea i link al centro */
+}
+
+nav ul li {
+    margin: 0 20px; /* Spaziatura tra i link */
+}
+
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block; /* Imposta il link come un blocco per mantenere l'area cliccabile */
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a:active {
+    background-color: #555;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+main p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+}
+
+/* Additional Styling for Elements */
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+article p {
+    font-size: 1em;
+    color: #666;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+section p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Linee sotto About Me */
+section#about-me {
+    position: relative;
+}
+
+section#about-me::after,
+section#about-me::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+section#about-me::before {
+    top: 0;
+}
+
+section#about-me::after {
+    bottom: 0;
+}
+
+/* Percentuali delle competenze */
+.skills .skill {
+    margin-bottom: 20px;
+}
+
+.skills .skill p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.skills .skill .progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.skills .skill .progress-bar .progress {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.skills .skill .progress-bar .progress-html {
+    background-color: #f39c12; /* Per HTML */
+}
+
+.skills .skill .progress-bar .progress-css {
+    background-color: #3498db; /* Per CSS */
+}
+
+.skills .skill .progress-bar .progress-javascript {
+    background-color: #e74c3c; /* Per JavaScript */
+}
+
+/* Bottone per tornare in alto */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    display: none; /* Nascosto per default */
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+/* Stile per i moduli */
+form {
+    margin: 20px 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Media Queries per la Responsività */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form textarea {
+        width: 100%;
+    }
+
+    #back-to-top {
+        font-size: 1.2em;
+    }
+}
+
